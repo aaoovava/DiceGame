@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane styleClass="pane" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.DeckScreenController"
+            prefHeight="600.0" prefWidth="800.0">
+
+    <HBox alignment="CENTER" spacing="20" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+        <VBox alignment="TOP_LEFT" styleClass="set-name-background" maxHeight="800" prefWidth="900">
+
+            <HBox spacing="100">
+                <Text styleClass="deck-label-text">Market (4 dice)</Text>
+                <AnchorPane maxWidth="277" maxHeight="66" prefHeight="66" prefWidth="277"
+                            styleClass="game-text-box-black">
+                    <Text fx:id="balance" styleClass="game-white-counter" text="300" AnchorPane.topAnchor="13"
+                          AnchorPane.leftAnchor="40">
+                        <HBox.margin>
+                            <Insets top="13" left="40"/>
+                        </HBox.margin>
+                    </Text>
+                    <ImageView AnchorPane.rightAnchor="10" AnchorPane.topAnchor="0"
+                               fitWidth="65"
+                               fitHeight="65"
+                               preserveRatio="true">
+                        <Image url="/coins.png"/>
+                    </ImageView>
+
+                </AnchorPane>
+                <VBox.margin>
+                    <Insets left="50" top="60"/>
+                </VBox.margin>
+            </HBox>
+            <HBox fx:id="marketRow" spacing="20" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets left="50" right="50"/>
+                </padding>
+            </HBox>
+
+            <Text styleClass="deck-label-text">Your deck (max 6 dice)
+                <VBox.margin>
+                    <Insets top="30" left="50"/>
+                </VBox.margin>
+            </Text>
+
+            <HBox fx:id="playerDeckRow" spacing="20" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets left="50" right="50"/>
+                </padding>
+            </HBox>
+            <HBox spacing="250">
+                <Text styleClass="deck-label-text">Info</Text>
+                <Text fx:id="deckBalance" textAlignment="RIGHT" styleClass="deck-balance-text">Deck balance: 1</Text>
+                <VBox.margin>
+                    <Insets left="50" top="30"/>
+                </VBox.margin>
+            </HBox>
+            <Text styleClass="deck-name-text" fx:id="diceName">Pick the dice(one Click)
+                <VBox.margin>
+                    <Insets left="50" top="15"/>
+                </VBox.margin>
+            </Text>
+            <Text styleClass="deck-price-text" fx:id="dicePrice">
+                <VBox.margin>
+                    <Insets left="50" top="10"/>
+                </VBox.margin>
+            </Text>
+            <Text styleClass="deck-info-text" wrappingWidth="800" fx:id="diceInfo">
+                <VBox.margin>
+                    <Insets left="50"/>
+                </VBox.margin>
+            </Text>
+        </VBox>
+    </HBox>
+    <ImageView styleClass="clickable" AnchorPane.TopAnchor="50" AnchorPane.leftAnchor="50"
+               fx:id="backButton"
+               fitWidth="75"
+               fitHeight="66"
+               preserveRatio="true">
+        <image>
+            <Image url="/back.png"/>
+        </image>
+    </ImageView>
+</AnchorPane>

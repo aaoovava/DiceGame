@@ -1,0 +1,14 @@
+module:com.example.dicegame
+controllers
+db
+exceptions
+model
+model.observers
+model.records
+model.records.dice
+model.records.enums
+model.records.npc
+multiplayer
+services
+unit_tests
+view.applications

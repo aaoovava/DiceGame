@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.GameScreenController"
+            prefHeight="1080" prefWidth="1920"
+            styleClass="game-background">
+    <StackPane fx:id="messageContainer"
+               alignment="CENTER"
+               visible="false"
+               AnchorPane.topAnchor="0"
+               AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0">
+        <Text fx:id="bustedText"
+              styleClass="busted-text"
+              text="BUSTED!"
+              visible="false"/>
+        <Text fx:id="winText" styleClass="win-text" visible="false"/>
+    </StackPane>
+
+    <ImageView styleClass="clickable" AnchorPane.TopAnchor="50" AnchorPane.leftAnchor="50"
+               fx:id="backButton"
+               fitWidth="75"
+               fitHeight="66"
+               preserveRatio="true">
+        <image>
+            <Image url="/back.png"/>
+        </image>
+    </ImageView>
+
+    <Text fx:id="turnScore" styleClass="game-main-text" text="Player: 40000" AnchorPane.topAnchor="200" AnchorPane.rightAnchor="70"/>
+
+    <GridPane fx:id="selectedDiceGrid"
+              AnchorPane.bottomAnchor="120"
+              AnchorPane.rightAnchor="50"
+              hgap="20" vgap="30"
+              style="-fx-background-color: transparent;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" halignment="CENTER" prefWidth="50"/>
+            <ColumnConstraints hgrow="NEVER" halignment="CENTER" prefWidth="50"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="NEVER" prefHeight="50"/>
+            <RowConstraints vgrow="NEVER" prefHeight="50"/>
+            <RowConstraints vgrow="NEVER" prefHeight="50"/>
+            <RowConstraints vgrow="NEVER" prefHeight="50"/>
+            <RowConstraints vgrow="NEVER" prefHeight="50"/>
+        </rowConstraints>
+    </GridPane>
+
+
+    <VBox spacing="50" AnchorPane.leftAnchor="50" AnchorPane.bottomAnchor="50">
+
+        <HBox spacing="10">
+            <ImageView fitWidth="54" fitHeight="54" >
+                <Image url="/key_e.png"/>
+            </ImageView>
+            <Text styleClass="game-main-text" text="Score">
+                <HBox.margin>
+                    <Insets top="4"/>
+                </HBox.margin>
+            </Text>
+        </HBox>
+        <HBox spacing="10">
+            <ImageView fitWidth="54" fitHeight="54" >
+                <Image url="/key_q.png"/>
+            </ImageView>
+            <Text styleClass="game-main-text" text="Pass">
+                <HBox.margin>
+                    <Insets top="4"/>
+                </HBox.margin>
+            </Text>
+        </HBox>
+        <VBox spacing="10">
+            <Text styleClass="game-main-text" text="Old Man Jeb" fx:id="npcName"/>
+            <AnchorPane maxWidth="277" maxHeight="66" prefHeight="66" prefWidth="277"
+                        styleClass="game-text-box-white">
+                <Text fx:id="npcCounter" styleClass="game-black-counter" text="3000" AnchorPane.topAnchor="13"
+                      AnchorPane.leftAnchor="40"/>
+            </AnchorPane>
+        </VBox>
+        <VBox spacing="10">
+            <Text styleClass="game-main-text" text="Bet">
+            </Text>
+            <AnchorPane maxWidth="277" maxHeight="66" prefHeight="66" prefWidth="277"
+                        styleClass="game-text-box-black">
+                <Text fx:id="betOfTheGame" styleClass="game-white-counter" text="300" AnchorPane.topAnchor="13"
+                      AnchorPane.leftAnchor="40">
+                    <HBox.margin>
+                        <Insets top="13" left="40"/>
+                    </HBox.margin>
+                </Text>
+                <ImageView AnchorPane.rightAnchor="10" AnchorPane.topAnchor="0"
+                           fitWidth="65"
+                           fitHeight="65"
+                           preserveRatio="true">
+                    <Image url="/coins.png"/>
+                </ImageView>
+
+            </AnchorPane>
+        </VBox>
+        <VBox spacing="10">
+            <Text styleClass="game-main-text-player" text="Player1" fx:id="playerName"/>
+            <AnchorPane maxWidth="277" maxHeight="66" prefHeight="66" prefWidth="277"
+                        styleClass="game-text-box-white">
+                <Text  fx:id="playerCounter" styleClass="game-black-counter" text="3000" AnchorPane.topAnchor="13"
+                      AnchorPane.leftAnchor="40"/>
+            </AnchorPane>
+        </VBox>
+    </VBox>
+
+    <HBox alignment="CENTER" AnchorPane.bottomAnchor="150" AnchorPane.leftAnchor="450" AnchorPane.topAnchor="250" AnchorPane.rightAnchor="400">
+        <Pane style="-fx-background-color: #6C4A4A;" fx:id="diceContainer" prefHeight="856" prefWidth="859">
+
+        </Pane>
+    </HBox>
+
+
+</AnchorPane>

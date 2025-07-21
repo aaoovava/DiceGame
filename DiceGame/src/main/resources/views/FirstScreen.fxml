@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+
+<VBox fx:id="pane" styleClass="pane"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.FirstScreenController">
+
+    <Region prefHeight="200"/>
+
+    <HBox >
+        <Region prefWidth="150"/>
+
+        <Text fill="#6C4A4A" styleClass="main-text" text="Dice Game"/>
+    </HBox>
+    <Region prefHeight="350"/>
+    <HBox alignment="CENTER">
+            <Text fx:id="pressText" fill="#6C4A4A"
+                  styleClass="secondary-text"
+                  text="Press any key to start"/>
+    </HBox>
+</VBox>

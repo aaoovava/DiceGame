@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.StoryScreenController"
+      prefHeight="400.0" prefWidth="600.0"
+      styleClass="pane">
+
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <HBox AnchorPane.leftAnchor="70" AnchorPane.topAnchor="100">
+            <VBox spacing="40" prefWidth="650" alignment="TOP_CENTER">
+                <Text styleClass="menu-main-text" text="Story"/>
+                <Text fx:id="jebButton" styleClass="story-jeb-text" text="Old Man Jeb"/>
+                <Text fx:id="samButton" styleClass="story-secondary-text" text="&quot;Slippery' Sam&quot;"/>
+                <VBox alignment="center" spacing="10" styleClass="set-name-background" maxWidth="450" prefHeight="180">
+                    <HBox.margin>
+                        <Insets top="10" left="10" bottom="10" right="10"/>
+                    </HBox.margin>
+                    <Text styleClass="deck-label-text">Game bet:</Text>
+                    <HBox alignment="center" spacing="20">
+                        <ImageView styleClass="clickable"
+                                   fx:id="minus"
+                                   fitWidth="75"
+                                   fitHeight="66"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="/left.png"/>
+                            </image>
+                        </ImageView>
+                        <Text fx:id="betText" styleClass="deck-balance-text">100</Text>
+                        <ImageView styleClass="clickable"
+                                   fx:id="plus"
+                                   fitWidth="75"
+                                   fitHeight="66"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="/right.png"/>
+                            </image>
+                        </ImageView>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </HBox>
+
+        <ImageView styleClass="clickable" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="50"
+                fx:id="backButton"
+                   fitWidth="75"
+                   fitHeight="66"
+                   preserveRatio="true">
+            <image>
+                <Image url="/back.png"/>
+            </image>
+        </ImageView>
+
+        <VBox styleClass="story-background"
+              maxWidth="435"
+              AnchorPane.rightAnchor="50"
+              AnchorPane.topAnchor="0"
+              AnchorPane.bottomAnchor="0"
+              spacing="40"
+              alignment="TOP_CENTER">
+            <Region prefHeight="40"/>
+            <ImageView fx:id="characterImageView"
+                       fitWidth="183"
+                       fitHeight="183"
+                       preserveRatio="true">
+                <image>
+                    <Image url="/Jeb.png"/>
+                </image>
+            </ImageView>
+            <Text fx:id="storyText1" styleClass="story-text-quote" textAlignment="CENTER" wrappingWidth="400"
+                  text="&quot;Back in my day, we rolled bones, not fancy dice!&quot;"/>
+            <Text fx:id="storyText2" styleClass="story-text" textAlignment="CENTER"
+                  text="A wrinkled, tobacco-chewing farmer who’s been playing dice since before the others were born."
+                  wrappingWidth="400"/>
+
+            <HBox styleClass="story-button-background" fx:id="gambleButton" maxHeight="100" maxWidth="300" alignment="CENTER">
+                <Text styleClass="story-button-text" text="Gamble"/>
+            </HBox>
+        </VBox>
+
+        <AnchorPane maxWidth="277" maxHeight="66" prefHeight="66" prefWidth="277" AnchorPane.bottomAnchor="50" AnchorPane.leftAnchor="150"
+                    styleClass="game-text-box-black">
+            <Text fx:id="balance" styleClass="game-white-counter" text="300" AnchorPane.topAnchor="13"
+                  AnchorPane.leftAnchor="40">
+                <HBox.margin>
+                    <Insets top="13" left="40"/>
+                </HBox.margin>
+            </Text>
+            <ImageView AnchorPane.rightAnchor="10" AnchorPane.topAnchor="0"
+                       fitWidth="65"
+                       fitHeight="65"
+                       preserveRatio="true">
+                <Image url="/coins.png"/>
+            </ImageView>
+
+        </AnchorPane>
+    </AnchorPane>
+</VBox>

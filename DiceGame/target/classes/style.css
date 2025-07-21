@@ -1,0 +1,313 @@
+@font-face {
+    font-family: 'Jua';
+    src: url('fonts/Jua-Regular.ttf');
+}
+
+.pane {
+    -fx-background-image: url('img/backImage.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.main-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 150px;
+    -fx-fill: #6C4A4A;
+}
+
+.secondary-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 50px;
+    -fx-text-fill: #6C4A4A;
+    -fx-alignment: top-center;
+}
+
+.menu-main-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 150px;
+    -fx-fill: #FCD978;
+}
+
+.menu-secondary-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 65px;
+    -fx-fill: #655656;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0), 0, 0, 0, 0);
+    -fx-mouse-transparent: false;
+    -fx-cursor: hand;
+}
+
+.menu-secondary-text:hover {
+    -fx-fill: #39596D;
+    -fx-effect: dropshadow(gaussian, rgba(57,89,109,0.7), 5, 0.5, 0, 0);
+}
+
+.menu-player-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 40px;
+    -fx-fill: #655656;
+}
+
+.menu-player-background {
+    -fx-background-image: url('img/playerBack.png');
+        -fx-background-size: cover;
+        -fx-background-repeat: no-repeat;
+}
+
+.menu-player-settings {
+    -fx-background-image: url('img/setings.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.story-main-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 150px;
+    -fx-fill: #FCD978;
+}
+
+.story-secondary-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 65px;
+    -fx-fill: #655656;
+    -fx-mouse-transparent: false;
+    -fx-cursor: hand;
+}
+
+.story-background {
+    -fx-background-image: url('img/storyBackground.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.story-button-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 73px;
+    -fx-fill: #FFFFFF;
+    -fx-mouse-transparent: false;
+    -fx-cursor: hand;
+}
+
+.story-button-text:hover {
+    -fx-fill: #FFC31D;
+    -fx-effect: dropshadow(gaussian, rgba(255,195,29,0.5), 5, 0.5, 0, 0);
+}
+
+.story-button-background {
+    -fx-background-image: url('img/storyButton.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.story-text-quote {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 41px;
+    -fx-fill: #39596D;
+}
+
+.story-jeb-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 65px;
+    -fx-fill: #39596D;
+}
+
+.story-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 41px;
+    -fx-fill: #614A2A;
+}
+
+.clickable {
+    -fx-cursor: hand;
+}
+
+.name-field {
+    -fx-background-color: #f8f8f8;
+    -fx-font-family: 'Jua';
+    -fx-background-radius: 15;
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+    -fx-padding: 8 12;
+    -fx-font-size: 60px;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+.name-field:focused {
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 2;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(74,144,226,0.2), 5, 0, 0, 2);
+}
+
+.name-field:hover {
+    -fx-border-color: #a0a0a0;
+}
+
+.game-background {
+    -fx-background-image: url('img/gameBack.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+
+.game-text-box-white {
+    -fx-background-image: url('img/textBoxWhite.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+.game-text-box-black {
+    -fx-background-image: url('img/textBoxBlack.png');
+    -fx-background-size: cover;
+     -fx-background-repeat: no-repeat;
+}
+
+.game-main-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 43px;
+    -fx-fill: #F9F9F9;
+}
+
+.game-white-counter {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 43px;
+    -fx-fill: #F9F9F9;
+}
+
+.game-black-counter {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 43px;
+    -fx-fill: #000000;
+}
+
+.game-Barrel {
+    -fx-background-image: url('img/gameBarrel.png');
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+
+
+.dice {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.3, 2, 2);
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s;
+}
+
+.dice:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.5, 4, 4);
+}
+
+.busted-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 80px;
+    -fx-font-weight: bold;
+    -fx-fill: #ff0000;
+    -fx-stroke: #000000;
+    -fx-stroke-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.5, 0, 0);
+}
+
+.win-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 80px;
+    -fx-font-weight: bold;
+    -fx-fill: #00ff00; /* Bright green instead of red */
+    -fx-stroke: #000000; /* White outline instead of black */
+    -fx-stroke-width: 3px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0.5, 0, 0);
+    -fx-text-alignment: center;
+}
+
+.game-main-text-player {
+-fx-font-family: 'Jua';
+-fx-font-size: 43px;
+-fx-fill: #FFC31D;
+}
+
+.gold-button {
+    -fx-background-color: #F9E7B5;
+    -fx-background-radius: 15;
+    -fx-border-color: #000000;
+    -fx-border-radius: 15;
+    -fx-border-width: 1;
+    -fx-text-fill: #000000;
+    -fx-font-family: 'Jua';
+    -fx-font-size: 43px;
+    -fx-padding: 8 16;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}
+
+.gold-button:hover {
+    -fx-background-color: #F8E0A0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+
+.gold-button:pressed {
+    -fx-background-color: #F5D887;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+    -fx-translate-y: 1;
+}
+
+.gold-button:focused {
+    -fx-border-width: 2;
+    -fx-border-color: #000000;
+}
+
+.menu-edit-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 80px;
+    -fx-fill: #FFFFFF;
+}
+
+.set-name-background {
+    -fx-background-color: #706051;
+    -fx-border-width: 10;
+    -fx-border-radius: 60;
+    -fx-border-color: #000000;
+    -fx-background-radius: 60;
+}
+
+.deck-name-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 50px;
+    -fx-fill: #F9E7B5;
+}
+
+.deck-price-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 40px;
+    -fx-fill: #FFC31D;
+}
+
+.deck-info-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 43px;
+    -fx-fill: #000000;
+}
+
+.deck-label-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 60px;
+    -fx-fill: #FFFFFF;
+}
+
+.deck-balance-text {
+    -fx-font-family: 'Jua';
+    -fx-font-size: 60px;
+    -fx-fill: #FFC31D;
+}
+
+
+
+
+
+
+

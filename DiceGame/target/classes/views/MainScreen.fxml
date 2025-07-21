@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.shape.Rectangle?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.MainScreenController"
+      styleClass="pane"
+      prefHeight="1080"
+      prefWidth="1920">
+
+    <Region prefHeight="100"/>
+
+    <HBox>
+        <Region prefWidth="70"/>
+        <VBox spacing="40" prefWidth="650" alignment="TOP_CENTER">
+            <Text styleClass="menu-main-text" text="Menu" />
+            <Text  fx:id="storyButton" styleClass="menu-secondary-text" text="Story" />
+            <Text styleClass="menu-secondary-text" text="Multiplayer"/>
+            <Text fx:id="deckButton" styleClass="menu-secondary-text" text="Deck"/>
+        </VBox>
+        <VBox fx:id="settingBox" alignment="CENTER" styleClass="set-name-background" prefWidth="600" prefHeight="450" visible="false">
+
+            <Text  styleClass="menu-edit-text" text="Set up your name">
+            <VBox.margin>
+                <Insets left="20" right="20"/>
+            </VBox.margin>
+            </Text>
+            <TextField fx:id="nameTextField" alignment="CENTER"
+                       maxHeight="50"
+                       maxWidth="400"
+                       promptText="edit name"
+                       styleClass="name-field"
+                       layoutX="50"
+                       layoutY="100">
+
+                <VBox.margin>
+                    <Insets top="20"/>
+                </VBox.margin>
+            </TextField>
+
+            <Button fx:id="saveNameButton"
+                    text="Save Name"
+                    styleClass="gold-button"
+                    prefHeight="60"
+                    prefWidth="300">
+
+                <VBox.margin>
+                    <Insets top="60"/>
+                </VBox.margin>
+
+            </Button>
+
+        </VBox>
+    </HBox>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <AnchorPane maxWidth="277" maxHeight="66" prefHeight="66" prefWidth="277" AnchorPane.bottomAnchor="100" AnchorPane.rightAnchor="30"
+                    styleClass="game-text-box-black">
+            <Text fx:id="balance" styleClass="game-white-counter" text="300" AnchorPane.topAnchor="13"
+                  AnchorPane.leftAnchor="40">
+                <HBox.margin>
+                    <Insets top="13" left="40"/>
+                </HBox.margin>
+            </Text>
+            <ImageView AnchorPane.rightAnchor="10" AnchorPane.topAnchor="0"
+                       fitWidth="65"
+                       fitHeight="65"
+                       preserveRatio="true">
+                <Image url="/coins.png"/>
+            </ImageView>
+
+        </AnchorPane>
+        <AnchorPane styleClass="menu-player-background"
+              prefWidth="320"
+              prefHeight="76"
+              AnchorPane.rightAnchor="30"
+              AnchorPane.bottomAnchor="20">
+
+            <Text fx:id="menuPlayerText"
+                  styleClass="menu-player-text"
+                  text="Player" AnchorPane.leftAnchor="15" AnchorPane.topAnchor="14">
+            </Text>
+
+            <ImageView fx:id="setName"
+                       fitWidth="50"
+                       styleClass="clickable"
+                       fitHeight="50"
+                       AnchorPane.rightAnchor="20"
+                       AnchorPane.topAnchor="12"
+                       >
+                <Image url="/setings.png"/>
+            </ImageView>
+        </AnchorPane>
+    </AnchorPane>
+</VBox>
